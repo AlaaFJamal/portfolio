@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portfolio Sections</title>
+</head>
+<body>
+	{% for section in mypage_list %}
+		<ul>
+			<a href="{% url 'details' section.id %}">
+				<li><h1>{{section.name}}</h1></li>
+			</a>
+			
+			<li><p>{{section.description}}</p></li>
+		</ul>
+	{% endfor %}
+</body>
+</html>
