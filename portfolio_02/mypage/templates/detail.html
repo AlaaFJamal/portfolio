@@ -1,13 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Detail</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title%}
+	{{section.name}}
+{% endblock title%}
 	
-		<h4>{{section.name}}</h4>
-		<h6>{{section.description}}</h6>
+{% block content %}
+	<h4>{{section.name}}</h4>
+	<h6>{{section.description}}</h6>
+{% endblock content%}
+
+	
+		
 		
 	
-</body>
-</html>

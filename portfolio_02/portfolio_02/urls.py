@@ -16,12 +16,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from mypage import views
+from django.conf import settings
+from django.conf.urls.static import static
+from mypage import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls, name='administrator'),
     path('home/', views.home, name='home_page'),
     path('sections/', views.list_view, name='sections'),
     path('form/', views.section_create, name='form'),
     path('sections/detail/<int:section_id>/', views.detail_view, name='details'),
 ]
+
+if settings.DEBUG:
+
+	urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+	urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>HOME</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %}
+	HOME
+{% endblock title %}
+
+{% block content %}
 	<h1>{{title_msg}}</h1>
 	<a href="{% url 'sections' %}">
 		<h3>{{CV_link}}</h3>
 	</a>
+{% endblock content %}
 	
-</body>
-</html>
+	

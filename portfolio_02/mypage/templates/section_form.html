@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>
-		Create new section
-	</title>
-</head>
-<body>
-	<form action="{% url 'form' %}" method="POST">
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+	{{section_create}}
+{% endblock title %}
+
+{% block content %}
+	<form action="{% url 'form' %}" method="POST" enctype="multipart/form-data">
 		{% csrf_token %}
-		{{form}}
+		{{form|crispy}}
 		<input type="submit" value="Create" name="">
 	</form>
+{% endblock content %}
 	
-</body>
-</html>
+	
