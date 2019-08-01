@@ -26,6 +26,7 @@ urlpatterns = [
     path('sections/', views.list_view, name='sections'),
     path('form/', views.section_create, name='form'),
     path('sections/detail/<int:section_id>/', views.detail_view, name='details'),
+    path('resume/', views.resume, name='resume'),
 ]
 
 if settings.DEBUG:

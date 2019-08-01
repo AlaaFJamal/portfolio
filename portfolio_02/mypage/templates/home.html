@@ -5,10 +5,11 @@
 {% endblock title %}
 
 {% block content %}
-	<h1>{{title_msg}}</h1>
-	<a href="{% url 'sections' %}">
-		<h3>{{CV_link}}</h3>
-	</a>
+	<h1>{{title_msg}} <span class="badge badge-secondary">New</span></h1>
+	<a href="{% url 'sections' %}" class="badge badge-info"><h5>{{CV_link}}</h5></a>
+	<a href="{% url 'sections' %}" class="badge badge-info"><h5>{{Media}}</h5></a>
+	<a href="{% url 'resume' %}" class="badge badge-info"><h5>{{CV_link2}}</h5></a>
+	
 {% endblock content %}
 	
 	

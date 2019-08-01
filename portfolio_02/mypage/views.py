@@ -6,11 +6,19 @@ from .forms import SectionForm
 
 def home(request):
 	context = {
-		"title_msg": "Welcome to my Portfolio .. new version",
+		"title_msg": "Welcome to my Portfolio ..",
 		"CV_link": "My Resume",
+		"CV_link2": "My CV",
+		"Media": "Media",
 	}
 	return render(request, 'home.html', context)
 
+def resume(request):
+	context = {
+		"CV_link2": "My CV",
+	}
+	return render(request, 'resume.html', context)
+	
 def list_view(request):
 	context = {
 		"mypage_list": Section.objects.all(),
