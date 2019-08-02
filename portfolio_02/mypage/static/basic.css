@@ -1,3 +1,10 @@
 .backgd-color {
-	background-color: #e3f2fd;
+	/*background-color: #e3f2fd;*/
+	background-image: url("bg10.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.header-color {
+	color: white;
 }

@@ -5,8 +5,16 @@
 {% endblock title%}
 	
 {% block content %}
-	<h4>{{section.name}}</h4>
-	<h6>{{section.content}}</h6>
+	<h4 class="header-color">{{section.name}}</h4>
+	<h6 class="header-color">{{section.content}}</h6>
+
+	<a href="{% url 'section-update' section.id %}">
+        <button type="button" class="btn btn-success btn-lg">Update</button>
+    </a>
+
+    <a href="{% url 'section-delete' section.id %}">
+        <button type="button" class="btn btn-danger btn-lg">Delete</button>
+    </a>
 {% endblock content%}
 
 	

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title%}
+	{{section_obj.name}}
+{% endblock title%}
+	
+{% block content %}
+	<form action="{% url 'section-update' section_obj.id %}" method="POST" enctype="multipart/form-data">
+	  {% csrf_token %}
+	  {{form|crispy}}
+	  <input type="submit" value="Update">
+	</form>
+{% endblock content%}

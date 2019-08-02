@@ -6,10 +6,10 @@
 {% endblock title %}
 
 {% block content %}
-	<form action="{% url 'form' %}" method="POST" enctype="multipart/form-data">
+	<form class="header-color" action="{% url 'form' %}" method="POST" enctype="multipart/form-data">
 		{% csrf_token %}
 		{{form|crispy}}
-		<input type="submit" value="Create" name="">
+		<input type="submit" value="Create" autofocus>
 	</form>
 {% endblock content %}
 	
