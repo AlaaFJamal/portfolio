@@ -8,7 +8,7 @@ from .forms import DeleteForm
 
 def home(request):
 	context = {
-		"title_msg": "Welcome to my Portfolio ..",
+		"title_msg": "Alaa Jamal Profile",
 		"CV_link": "My Resume",
 		"CV_link2": "My CV",
 		"Media": "Media",
