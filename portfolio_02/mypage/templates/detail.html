@@ -5,16 +5,19 @@
 {% endblock title%}
 	
 {% block content %}
-	<h4 class="header-color">{{section.name}}</h4>
-	<h6 class="header-color">{{section.content}}</h6>
+	<h3 style="text-align: center;" class="header-color">{{section.name}}</h3>
+	<h5 style="text-align: justify; padding: 35px; letter-spacing: 2px; text-indent: 50px" class="header-color">{{section.content}}</h5>
 
-	<a href="{% url 'section-update' section.id %}">
-        <button type="button" class="btn btn-success btn-lg">Update</button>
-    </a>
+	<div style="text-align: center;">
+		<a href="{% url 'section-update' section.id %}">
+        	<button type="button" class="btn btn-success btn-lg">Update</button>
+    	</a>
 
-    <a href="{% url 'section-delete' section.id %}">
-        <button type="button" class="btn btn-danger btn-lg">Delete</button>
-    </a>
+    	<a href="{% url 'section-delete' section.id %}">
+        	<button type="button" class="btn btn-danger btn-lg">Delete</button>
+    	</a>
+	</div>
+	
 {% endblock content%}
 
 	
